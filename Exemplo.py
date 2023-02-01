@@ -5,10 +5,23 @@ class Produto:
         self.nome = nome
         self.preco = preco
         self.estoque = estoque
-    def exibir (self):
-        print(f"Nome: {self.nome} -Preco: {self.preco}")
-produto = Produto("Massa de pizaa",5,400)
-produto.exibir()
+    def exibir (self,indice = 0):
+        print(f"{indice} === Nome: {self.nome} - Preco: {self.preco}")
+produto_um = Produto("Massa de pizaa",5,400)
+produto_dois = Produto("Tomate",2,100)
+
+produtos = [produto_um,produto_dois]
+for produto in produtos:
+    indice = produtos.index(produto)
+    produto.exibir(indice)
+indice_selecionado = int(input("Selecione o produto: "))
+if indice_selecionado > len(produtos):
+    print("Produto inexistente")
+else:
+    produto = produtos [indice_selecionado]
+    quantidade = int(input("Informe a quantidade: "))
+    print(f"O valor total é R$ {quantidade * produto.preco}")
+
 
 quantidade = int(input("Informe a quantidade: "))
-print(f"o valor total é: R$ {quantidade} * {self.preco}")
+print(f"o valor total é: R$ {quantidade} * {produto.preco}")
