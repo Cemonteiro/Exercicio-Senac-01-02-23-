@@ -7,7 +7,7 @@ class Produto:
         self.estoque = estoque
     def exibir (self):
         print(f"Nome: {self.nome} -Preco: {self.preco}")
-
 produto = Produto("Massa de pizaa",5,400)
+produto.exibir()
+
 quantidade = int(input("Informe a quantidade: "))
-print(quantidade)
