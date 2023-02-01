@@ -11,3 +11,4 @@ produto = Produto("Massa de pizaa",5,400)
 produto.exibir()
 
 quantidade = int(input("Informe a quantidade: "))
+print(f"o valor total é: R$ {quantidade} * {self.preco}")
